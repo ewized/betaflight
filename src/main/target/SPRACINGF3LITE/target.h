@@ -35,36 +35,8 @@
 #define USE_GYRO_MPU6050
 #define GYRO_MPU6050_ALIGN      CW270_DEG
 
-#undef ACC //ewized
-#undef USE_ACC_MPU6050 //ewized
-#undef ACC_MPU6050_ALIGN       //CW270_DEG //ewized
-
-#undef BARO //ewized
-#undef USE_BARO_BMP280 //ewized
-
-#undef USE_QUAD_MIXER_ONLY // ewized
-#undef BLACKBOX //ewized
-#undef CMS // ewized
-
-#undef USE_BARO_MS5611 //ewized
-#undef USE_BARO_BMP085 //ewized
-
-#undef MAG //ewized
-#undef USE_MAG_AK8975 //ewized
-#undef USE_MAG_HMC5883 //ewized
-#undef MAG_HMC5883_ALIGN       //CW270_DEG //ewized
-
-#undef USE_MAG_DATA_READY_SIGNAL //ewized
-#undef ENSURE_MAG_DATA_READY_IS_HIGH //ewized
-#undef MAG_INT_EXTI            //PC14 //ewized
-
-
 #define USE_FLASHFS
 #define USE_FLASH_M25P16
-
-#undef SONAR //ewized
-#undef SONAR_TRIGGER_PIN       //PB0 //ewized
-#undef SONAR_ECHO_PIN          //PB1 //ewized
 
 #define USE_UART1
 #define USE_UART2
@@ -109,15 +81,12 @@
 #define RSSI_ADC_PIN            PB2
 
 #define USE_DSHOT
-#undef USE_ESC_TELEMETRY //ewized
 #define REMAP_TIM17_DMA
 
 // UART1 TX uses DMA1_Channel4, which is also used by dshot on motor 4
 #if defined(USE_UART1_TX_DMA) && defined(USE_DSHOT)
 #undef USE_UART1_TX_DMA
 #endif
-
-#undef LED_STRIP // ewized
 
 #define ENABLE_BLACKBOX_LOGGING_ON_SPIFLASH_BY_DEFAULT
 
@@ -138,3 +107,14 @@
 
 #define USABLE_TIMER_CHANNEL_COUNT 17
 #define USED_TIMERS             ( TIM_N(1) | TIM_N(2) | TIM_N(3) | TIM_N(4) | TIM_N(15) | TIM_N(16) | TIM_N(17) )
+
+// Custom mods by ewized
+#undef ACC
+#undef BARO
+#undef USE_QUAD_MIXER_ONLY
+#undef BLACKBOX
+#undef CMS
+#undef MAG
+#undef SONAR
+#undef USE_ESC_TELEMETRY
+#undef LED_STRIP
