@@ -42,8 +42,8 @@
 #undef BARO //ewized
 #undef USE_BARO_BMP280 //ewized
 
-
-#undef USE_GPS //ewized
+#undef USE_QUAD_MIXER_ONLY // ewized
+#undef BLACKBOX //ewized
 
 #undef USE_BARO_MS5611 //ewized
 #undef USE_BARO_BMP085 //ewized
