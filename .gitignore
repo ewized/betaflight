@@ -27,3 +27,7 @@ make/local.mk
 
 mcu.mak
 mcu.mak.old
+
+# ewized
+.idea
+CMakeLists.txt
